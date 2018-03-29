@@ -2,53 +2,7 @@ const MDBAPIKey = 'ba52c91a2a4420e8af20bc1f8d3ae86f';
 const YoutubeAPIKey = 'AIzaSyCp3p6J0vMOVgB4xtInEszElwMrR-Yq5JY';
 const YoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
 
-/**************************************************************************************************  
-function to handle the search of the displayed person on the page
-****************************************************************************************************/
-function handlePerson () {
-    $(document).on('click', '.cast', function (event){
-        const p = $(this).val();
-        searchAPIByCast(p);
-      
-        
-    });
 
-}
-
-/**************************************************************************************************  
-HTML to add people of names that matches the user's search
-the names are clickable to handle further search of movies by that particular person
-****************************************************************************************************/
-function castHTML(item) {
-    return `
-        <button class="cast" value="${item.name}"> ${item.name}</button><br>
-    `
-}
-
-/**************************************************************************************************  
-callback function from Cast search from MDB API
-will call castHTML to display the names of matched people
-****************************************************************************************************/
-function displayCast(data) {
-    
-    if(data.results.length === 1) {
-        
-        const r = data.results[0].known_for.map(function (item) {
-                return movieHTML(item);
-        }); 
-        $('.js-results').html(r);
-
-    }
-    else {
-        const result = data.results.map(function (item) {
-            return castHTML(item);
-        });
-    
-        $('.js-results').html(result);
-    }
-    
-    
-}
 
 /**************************************************************************************************  
 HTML to add the clips info from Youtube
@@ -161,29 +115,10 @@ function searchMovieAPI(genre) {
 
 }
 
-/**************************************************************************************************  
-Search MDBA API for actors/actresses so it can call displayCast to display the names
-****************************************************************************************************/
-function searchAPIByCast(person) {
-    const endpoint = 'https://api.themoviedb.org/3/search/person'
-    const settings = {
-        url: endpoint,
-        data: {
-            api_key: MDBAPIKey,
-            language: 'en-US',
-            include_adult: false,
-            query: `${person}`
-        },
-        dataType: 'json',
-        type: 'GET',
-        success: displayCast
-    }
-    $.ajax(settings);
 
-}
 
 /**************************************************************************************************  
-function handles initial search buttons for genres or cast
+function handles initial search buttons for genres 
 ****************************************************************************************************/
 function handleSearch() {
 
@@ -193,12 +128,6 @@ function handleSearch() {
         console.log(genre);
         searchMovieAPI(genre);
 
-    });
-
-    $(document).on('click', '.search-by-cast', function (event) {
-        event.preventDefault();
-        const person = $('#search-by-cast').val();
-        searchAPIByCast(person);
     });
 
 }
@@ -211,7 +140,7 @@ function handleClicks() {
 
     handleSearch();
     handleClips();
-    handlePerson();
+
     
 }
 
