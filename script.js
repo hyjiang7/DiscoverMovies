@@ -19,7 +19,7 @@ function clipsHTML(items) {
     return `
     <div class="movies">
     <p class="video-title"> ${items.snippet.title} </p>
-    <a href="https://youtube.com/watch?v=${items.id.videoId}" target="_blank" id="thumbnail-img" role=none title="${items.snippet.title}-video-thumbnail">
+    <a href="https://youtube.com/watch?v=${items.id.videoId}" target="_blank" class="thumbnail-img" role=none title="${items.snippet.title}-video-thumbnail">
     <img src="${items.snippet.thumbnails.medium.url}" alt="${items.snippet.title}-video-thumbnail"></a>
     </div>
     
@@ -81,13 +81,13 @@ function handleClips() {
 function movieHTML(item) {
 
     return `
-        <div class="movies"> 
+        <div class="movies" aria-live="polite"> 
             <option class="movie-title">${item.title} </option>
             <p><strong>Release Date:</strong> ${item.release_date}</p>
             <p><strong>Summary:</strong> ${item.overview}</p>
             <p class="watch"><strong>See:</strong></p>
             <div class="youtube-container">
-                <button class="watch-youtube" value="${item.title}"><img src="./youtube-logo.png" alt="youtube-logo" class="youtube-logo"/></button>
+                <button class="watch-youtube" value="${item.title}" aria-live="assertive"><img src="./youtube-logo.png" alt="youtube-logo" class="youtube-logo"/></button>
             <div>
         </div>
     
@@ -111,11 +111,11 @@ function displayMovies(data) {
     
 
     if(STORE.page > 1) {
-        $('.js-results').append('<button class="search prev"> Prev </button>');
+        $('.js-results').append('<button class="search prev" aria-live="assertive"> Prev </button>');
     }
 
     if(STORE.page < STORE.totalPages) {
-        $('.js-results').append('<button class="search next"> Next </button>');
+        $('.js-results').append('<button class="search next" aria-live="assertive"> Next </button>');
     }
     
 }

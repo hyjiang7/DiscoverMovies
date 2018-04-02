@@ -14,8 +14,8 @@
         <div class="logo"></div>
         <h1 class="page-title">Discover Movies</h1>
         <form>
-            <fieldset class="genre">
-                <section > 
+            <fieldset class="genre" name="search-by-genre">
+                <section>
                     <label for="search-by-genre">SEARCH BY GENRE:</label>
                     <select id="search-by-genre">
                         <option></option>
@@ -39,32 +39,27 @@
                         <option value="10752">War</option>
                         <option value="37">Western</option>
                     </select>
-                    <button type="submit" class="search search-by-genre"> SEARCH </button>
+                    <button type="submit" class="search search-by-genre" aria-live="assertive"> SEARCH </button>
                 </section>
             </fieldset>
 
-            <fieldset class="popular">
+            <fieldset class="popular" name="search-popular">
                 <label for="search-popular">SEARCH POPULAR:</label>
-                <button type="submit" class="search search-popular"> SEARCH </button>
-              
+                <button type="submit" class="search search-popular" aria-live="assertive"> SEARCH </button>
             </fieldset>
         </form>
-
-
     </header>
 
-    <main role="main">
+    <main role="main" class="hidden" hidden aria-live="assertive">
 
         <h2 class="results hidden" hidden>Results</h2>
         <div class="js-results hidden" hidden></div>
-
 
     </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 
 
 </html>
