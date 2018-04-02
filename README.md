@@ -1,4 +1,6 @@
 # DiscoverMovies
+https://github.com/hyjiang7/DiscoverMovies
+
 Description: 
   - This web app allows user to search for movies from the movie db(https://api.themoviedb.org) api based on genres or 
     search popular movies based on popularity votes. 
@@ -10,3 +12,12 @@ Description:
 Directions for usage:
   - To search by genre: click on drop down menu to selec the genre. Click on the search button adjacent to the menu 
   - To search by popular movies: click on the search button directly below the words "search popular"
+  - press the next or prev buttons on the bottom of the page to view subsequent pages
+
+Key technologies used:
+  - HTML
+  - CSS
+  - JavaScript
+  - jQuery
+  
+ Screenshots:
