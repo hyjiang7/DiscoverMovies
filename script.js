@@ -1,3 +1,6 @@
+/**************************************************************************************************  
+* STORE stores the results from the mdb api search, as well as youtube keys and url 
+****************************************************************************************************/
 const STORE = {
     page: 1,
     totalPages: null,
@@ -8,8 +11,8 @@ const STORE = {
 };
 
 /**************************************************************************************************  
-HTML to add the clips info from Youtube
-info includes title and clickable thumbnail to take user to video
+* HTML to add the clips info from Youtube
+* info includes title and clickable thumbnail to take user to video
 ****************************************************************************************************/
 function clipsHTML(items) {
 
@@ -21,13 +24,11 @@ function clipsHTML(items) {
     </div>
     
     `
-
 }
 
-
 /**************************************************************************************************  
-callback function for Youtube API search
-displays the results of the clips related to title 
+* callback function for Youtube API search
+* displays the results of the clips related to title 
 ****************************************************************************************************/
 function displayClips(data) {
     const clips = data.items.map(function (item) {
@@ -37,7 +38,7 @@ function displayClips(data) {
 }
 
 /**************************************************************************************************  
-function searches Youtube API for titles of movies
+* function searches Youtube API for titles of movies
 ****************************************************************************************************/
 function searchYoutube(title) {
     const ajaxObject = {
@@ -60,7 +61,7 @@ function searchYoutube(title) {
 }
 
 /**************************************************************************************************  
-function handles click to watch clips of certain titles
+* function handles click to watch clips of certain titles
 ****************************************************************************************************/
 function handleClips() {
 
@@ -81,7 +82,7 @@ function movieHTML(item) {
 
     return `
         <div class="movies"> 
-            <option class="title-search" ">${item.title} </option>
+            <option class="movie-title">${item.title} </option>
             <p><strong>Release Date:</strong> ${item.release_date}</p>
             <p><strong>Summary:</strong> ${item.overview}</p>
             <p class="watch"><strong>See:</strong></p>
@@ -142,8 +143,6 @@ function searchMovieAPI() {
 
     }
     
-    
-
 }
 
 
