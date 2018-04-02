@@ -11,49 +11,54 @@
 
 <body>
     <header role="banner">
+        <div class="logo"></div>
         <h1 class="page-title">Discover Movies</h1>
         <form>
-                <fieldset>
-                    <section>
-                        <label for="search-by-genre">Search by genre:</label>
-                        <select id="search-by-genre">
-                            <option></option>
-                            <option value="28">Action</option>
-                            <option value="12">Adventure</option>
-                            <option value="16">Animation</option>
-                            <option value="35">Comedy</option>
-                            <option value="80">crime</option>
-                            <option value="99">Documentary</option>
-                            <option value="18">Drama</option>
-                            <option value="10751">Family</option>
-                            <option value="14">Fantasy</option>
-                            <option value="36">History</option>
-                            <option value="27">Horror</option>
-                            <option value="10402">Music</option>
-                            <option value="9648">Mystery</option>
-                            <option value="10749">Romance</option>
-                            <option value="878">Science Fiction</option>
-                            <option value="10770">TV Movie</option>
-                            <option value="53">Thriller</option>
-                            <option value="10752">War</option>
-                            <option value="37">Western</option>
-                        </select>
-                        <button type="submit" class=" search search-by-genre"> Search </button>
-                    </section>
-                </fieldset>
-            </form>
+            <fieldset class="genre">
+                <section > 
+                    <label for="search-by-genre">SEARCH BY GENRE:</label>
+                    <select id="search-by-genre">
+                        <option></option>
+                        <option value="28">Action</option>
+                        <option value="12">Adventure</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">crime</option>
+                        <option value="99">Documentary</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="10402">Music</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Fiction</option>
+                        <option value="10770">TV Movie</option>
+                        <option value="53">Thriller</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+                    <button type="submit" class="search search-by-genre"> SEARCH </button>
+                </section>
+            </fieldset>
+
+            <fieldset class="popular">
+                <label for="search-popular">SEARCH POPULAR:</label>
+                <button type="submit" class="search search-popular"> SEARCH </button>
+              
+            </fieldset>
+        </form>
+
+
     </header>
+
     <main role="main">
-        
-        <section class="api-results">
-            <h2 class="page-title movies" hidden>Results</h2>
-            <div class="js-results" hidden></div>
+
+        <h2 class="results hidden" hidden>Results</h2>
+        <div class="js-results hidden" hidden></div>
 
 
-            <h2 class="page-title">Discover Popular Movies</h2>
-            <div class="js-popular-movies"></div>
-            </div>
-        </section>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
