@@ -21,3 +21,6 @@ Key technologies used:
   - jQuery
   
  Screenshots:
+<img width="1036" alt="screen shot header" src="https://user-images.githubusercontent.com/34972371/38217103-df9d9a32-3681-11e8-9e3c-b59296b704d5.png">
+<img width="1036" alt="screen shot movie results" src="https://user-images.githubusercontent.com/34972371/38217105-e1558ea2-3681-11e8-955a-e557c490ce12.png">
+<img width="714" alt="screen shot youtube thumbnails" src="https://user-images.githubusercontent.com/34972371/38217107-e2cedc70-3681-11e8-959c-7bdb3dc56a03.png">
