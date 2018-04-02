@@ -215,6 +215,9 @@ main {
         position: relative;
         top: 60px;
     }
+    .movies {
+        font-size: 20px;
+    }
 
 }
 
