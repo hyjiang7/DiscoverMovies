@@ -17,10 +17,10 @@ const STORE = {
 function clipsHTML(items) {
 
     return `
-    <div class="movies">
-    <p class="video-title"> ${items.snippet.title} </p>
-    <a href="https://youtube.com/watch?v=${items.id.videoId}" target="_blank" class="thumbnail-img" role=none title="${items.snippet.title}-video-thumbnail">
-    <img src="${items.snippet.thumbnails.medium.url}" alt="${items.snippet.title}-video-thumbnail"></a>
+    <div class="clips">
+        <h3 class="video-title"><strong> ${items.snippet.title}</strong> </h3>
+        <a href="https://youtube.com/watch?v=${items.id.videoId}" target="_blank" class="thumbnail-img" role=none title="${items.snippet.title}-video-thumbnail">
+        <img src="${items.snippet.thumbnails.medium.url}" alt="${items.snippet.title}-video-thumbnail" ></a>
     </div>
     
     `
@@ -47,7 +47,7 @@ function searchYoutube(title) {
             part: 'snippet',
             key: STORE.YoutubeAPIKey,
             q: `${title}`,
-            maxResults: 7,
+            maxResults: 8,
             type: ''
         },
         dataType: 'json',
@@ -82,17 +82,19 @@ function movieHTML(item) {
 
     return `
         <div class="movies" aria-live="polite"> 
-            <header class="movies-header">
-                <h3 class="m0 movie-title">${item.title} </h3>
-            </header>
-            <section>   
+
+            <div class="movie-title-div">
+                <h3 class="movie-title">${item.title} </h3>
+            </div>
+            <div class="movie-content">
+
                 <p><strong>Release Date:</strong> ${item.release_date}</p>
                 <p><strong>Summary:</strong> ${item.overview}</p>
                 <p class="watch"><strong>See:</strong></p>
                 <div class="youtube-container">
                     <button class="watch-youtube" value="${item.title}" aria-live="assertive"><img src="./youtube-logo.png" alt="youtube-logo" class="youtube-logo"/></button>
                 <div>
-            </section>
+            </div>
         </div>
     
     `
