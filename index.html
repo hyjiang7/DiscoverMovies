@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
 </head>
 
-<body>
-    <header role="banner">
+<body class="m0">
+    <header role="banner" >
         <div class="logo"></div>
         <h1 class="page-title">Discover Movies</h1>
         <form>
-            <fieldset class="genre" name="search-by-genre">
-                <section>
+            <fieldset class="search-field" name="search-by-genre">
+                <section class="genre">
                     <label for="search-by-genre">SEARCH BY GENRE:</label>
                     <select id="search-by-genre">
                         <option></option>
@@ -41,9 +41,7 @@
                     </select>
                     <button type="submit" class="search search-by-genre" aria-live="assertive"> SEARCH </button>
                 </section>
-            </fieldset>
-
-            <fieldset class="popular" name="search-popular">
+                
                 <label for="search-popular">SEARCH POPULAR:</label>
                 <button type="submit" class="search search-popular" aria-live="assertive"> SEARCH </button>
             </fieldset>

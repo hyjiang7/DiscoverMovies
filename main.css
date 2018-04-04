@@ -6,9 +6,13 @@ html {
     height: 100%;
 }
 
+.m0 {
+    margin: 0;
+  
+}
+
 /*added background image to header*/
 header {
-
     background: linear-gradient(to bottom, rgba(102,102,102, 0.3), rgba(229,230,235, 0.33)
     ), url('http://novalineabagni.com/wp-content/uploads/2017/07/Theater-Marquee-Signs.jpg') no-repeat;
     background-size: cover;
@@ -17,11 +21,11 @@ header {
     width: 100%;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+   
 }
 
 
 form {
-    width: 360px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 50px;
@@ -57,15 +61,16 @@ select {
     background-color: RGB(195, 48, 45);
     color: white;
     cursor: pointer;
-    padding: 8px;
+    
 }
 
 /*main title/header for the page*/
 .page-title {
     margin-top:0;
-    margin-bottom: 60px;
+    padding-top: 12px;
+    margin-bottom: 100px;
     color: white;
-    font-size: 50px;
+    font-size: 45px;
     text-shadow:
 		-1px -1px 0 #ce9b20,
 		1px -1px 0 #ce9b20,
@@ -76,39 +81,41 @@ select {
 fieldset {
     border: none;
     text-align: center;
+    position: relative;
+    top: 60px;
 }
 
 label {
-    font-size: 28px;
+    font-size: 26px;
     margin: 15px;
     margin-bottom: 8px;
     display: block;
     font-weight: bold;
 }
 
-/*search field for genres*/
-.genre {
-    position: relative;
-    top: 55px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*search field for popular movies*/
-.popular {
-    position: relative;
-    top: 45px;
-}
 
 main {
     font-family: 'Quicksand', sans-serif;
+    margin: 8px;
 }
 
 /*results that show each movie matching search*/
 .movies {
     width: 100%;
-    padding: 12px;
+    
     border: solid black 2px;
+    margin-bottom: 12px;
+}
+
+.movie-title-div {
+    margin: 0;
+    padding: 12px;
+    background-color: rgb(255, 250, 205);
+    border-bottom: 1px solid black;
+}
+
+.movie-content {
+    padding: 12px;
 }
 
 .movies:hover {
@@ -175,127 +182,42 @@ main {
     cursor: pointer;
 }
 
-.movie-title {
-    color: Red;
-}
-
-
-/*iphone 6/7/8+, pixel2*/
-@media only screen and (min-width: 411px) {
-    .genre {
-        position: relative;
-        top: 85px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .popular {
-        position: relative;
-        top: 60px;
-    }
-}
-
-/*ipad */
-@media only screen and (min-width: 760px) {
-    header {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        margin-top: 0px;
-    }
-
-    .genre {
-        position: relative;
-        top: 90px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .popular {
-        position: relative;
-        top: 60px;
-    }
-    .movies {
-        font-size: 20px;
-    }
+.clips {
+    border: 2px solid black; 
+    padding: 12px;
+    margin-bottom: 12px;
 
 }
 
 
-@media only screen and (min-width: 960px) {
-    .genre {
-       
-        position: relative;
-        top: 90px;
-        margin-left: auto;
-        margin-right: auto;
+@media only screen and (width: 320px) {
+    fieldset {
+        top: 35px;
     }
     label {
-        margin: 0px;
-        font-size: 36px;
+        font-size: 24px;
     }
-    .popular {
-        position: relative;
-        top: 90px;
-    }
-    .movies {
-        font-size: 20px;
-    }
-    
+
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 720px) {
     .page-title {
-        font-size: 70px;
-        margin-top: 0px;
-    }
-    .genre {
-        position: relative;
-        top: 115px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 18px;
+        font-size: 50px;
     }
 
+}
+
+@media only screen and (min-width: 1024px) {
+    .clips {
+        width: 49%;
+        display: inline-block;
+    }
     label {
-        font-size: 42px;
-        margin-bottom: 15px;
+        font-size: 32px;
     }
-    .search {
-        font-size: 28px;
+    .page-title {
+        font-size: 55px;
     }
 
-    select {
-        font-size: 28px;
-    }
-    .popular {
-        position: relative;
-        top: 90px;
-    }
-    form {
-        width: 400px;
-    }
-    .movies {
-        font-size: 20px;
-    }
-    .genre select {
-        width: 200px;
-        height: 48px;
-    }
 }
 
-@media only screen and (min-width: 1600px) {
-    html {
-        width: 1600px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .movies {
-        font-size: 20px;
-    }
-
-    .genre select {
-        width: 200px;
-        height: 48px;
-    }
-}
