@@ -7,12 +7,12 @@ html {
 }
 
 /*added background image to header*/
-header {
+.main-header {
 
     background: linear-gradient(to bottom, rgba(102,102,102, 0.3), rgba(229,230,235, 0.33)
     ), url('http://novalineabagni.com/wp-content/uploads/2017/07/Theater-Marquee-Signs.jpg') no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     background-position: center;
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -21,7 +21,7 @@ header {
 
 
 form {
-    width: 360px;
+    
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 50px;
@@ -57,12 +57,12 @@ select {
     background-color: RGB(195, 48, 45);
     color: white;
     cursor: pointer;
-    padding: 8px;
+    
 }
 
-/*main title/header for the page*/
+/*main title for the page*/
 .page-title {
-    margin-top:0;
+
     margin-bottom: 60px;
     color: white;
     font-size: 50px;
@@ -107,19 +107,30 @@ main {
 /*results that show each movie matching search*/
 .movies {
     width: 100%;
-    padding: 12px;
     border: solid black 2px;
+    margin-bottom: 12px;
 }
 
 .movies:hover {
     background-color: rgba(196, 23, 23, 0.4);
  
 }
-
+.movies section {
+    padding: 12px;
+}
 .js-results {
     width: 100%;
 }
 
+.m0 {
+    margin: 0;
+}
+
+.movies-header {
+    padding: 12px;
+    background-color: rgb(215,199,138);
+    border-bottom: 1px solid black;
+}
 
 /*container your youtube logo*/
 .youtube-container {
@@ -178,7 +189,20 @@ main {
 .movie-title {
     color: Red;
 }
+/*
+#bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://i.pinimg.com/originals/45/e0/01/45e001c0425f47d4dcf49234d065dbe3.jpg');
+    z-index: -1;
+}*/
 
+@media only screen and(width:320px) {
+    
+}
 
 /*iphone 6/7/8+, pixel2*/
 @media only screen and (min-width: 411px) {

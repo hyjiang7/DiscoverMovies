@@ -82,13 +82,17 @@ function movieHTML(item) {
 
     return `
         <div class="movies" aria-live="polite"> 
-            <option class="movie-title">${item.title} </option>
-            <p><strong>Release Date:</strong> ${item.release_date}</p>
-            <p><strong>Summary:</strong> ${item.overview}</p>
-            <p class="watch"><strong>See:</strong></p>
-            <div class="youtube-container">
-                <button class="watch-youtube" value="${item.title}" aria-live="assertive"><img src="./youtube-logo.png" alt="youtube-logo" class="youtube-logo"/></button>
-            <div>
+            <header class="movies-header">
+                <h3 class="m0 movie-title">${item.title} </h3>
+            </header>
+            <section>   
+                <p><strong>Release Date:</strong> ${item.release_date}</p>
+                <p><strong>Summary:</strong> ${item.overview}</p>
+                <p class="watch"><strong>See:</strong></p>
+                <div class="youtube-container">
+                    <button class="watch-youtube" value="${item.title}" aria-live="assertive"><img src="./youtube-logo.png" alt="youtube-logo" class="youtube-logo"/></button>
+                <div>
+            </section>
         </div>
     
     `

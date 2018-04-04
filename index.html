@@ -9,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
 </head>
 
-<body>
-    <header role="banner">
+<body class="m0">
+    <div id="bg-pattern"></div>
+    <header role="banner" class="main-header">
         <div class="logo"></div>
-        <h1 class="page-title">Discover Movies</h1>
+        <h1 class="page-title m0">Discover Movies</h1>
         <form>
             <fieldset class="genre" name="search-by-genre">
                 <section>
@@ -41,7 +42,7 @@
                     </select>
                     <button type="submit" class="search search-by-genre" aria-live="assertive"> SEARCH </button>
                 </section>
-            </fieldset>
+            <fieldset>
 
             <fieldset class="popular" name="search-popular">
                 <label for="search-popular">SEARCH POPULAR:</label>
